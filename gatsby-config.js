@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

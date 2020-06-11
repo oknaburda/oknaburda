@@ -1,0 +1,19 @@
+.link {
+  display: inline-block;
+  color: $text-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  &--navigation {
+    @include fontSizeWeightAndLineHeight($font-18, $font-bold, $font-24);
+  }
+
+  &--active {
+    color: $accent-color;
+  }
+}

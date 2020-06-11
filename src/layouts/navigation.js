@@ -11,8 +11,8 @@ const navigationItems = [
 
 
 const Navigation = () => (
-  <nav className="col-auto">
-    <ul>
+  <nav className="navigation">
+    <ul className="navigation__list">
       {navigationItems}
     </ul>
   </nav>

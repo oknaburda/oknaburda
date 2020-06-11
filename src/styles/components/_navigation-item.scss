@@ -1,0 +1,7 @@
+.navigation-item {
+  padding-left: nth($spaces, 5);
+
+  @media screen and (max-width: $md) {
+    padding-left: nth($spaces, 2);
+  }
+}

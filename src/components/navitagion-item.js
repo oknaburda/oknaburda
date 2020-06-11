@@ -2,11 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 
 const NavigationItem = ({ url, title }) => (
-  <li>
+  <li className="navigation-item">
     <Link
-      className=""
+      className="link link--navigation"
       to={url}
       title={title}
+      activeClassName="link--active"
     >{title}
     </Link>
   </li>

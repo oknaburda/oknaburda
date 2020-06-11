@@ -13,7 +13,8 @@ const MainHero = () => {
                   }
               }
           }
-      }`)
+      }`
+  )
 
   return (
     <header>

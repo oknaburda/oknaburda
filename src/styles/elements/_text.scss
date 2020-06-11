@@ -1,0 +1,10 @@
+.text {
+  &--accent {
+    font-weight: $font-bold;
+    color: $accent-color;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,28 @@
+.header {
+  &__top-bar {
+    display: flex;
+    align-items: center;
+    background-color: $background-color-1;
+    min-height: 60px;
+    padding: nth($spaces, 1) 0;
+  }
+
+  &__text {
+    @media screen and (max-width: $xsm) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__main-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: nth($spaces, 1) 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}

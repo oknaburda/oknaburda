@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import OverviewSection from "../templates/overview-section"
 import MainHero from "../templates/main-hero"
 // import OfferGallerySection from "../templates/offer-gallery-section"
-// import OurSuccessesSection from "../templates/our-successes-section"
+import OurSuccessesSection from "../templates/our-successes-section"
 
 const IndexPage = () => (
   <Layout>
@@ -13,7 +13,7 @@ const IndexPage = () => (
     <MainHero/>
     <OverviewSection/>
     {/*<OfferGallerySection/>*/}
-    {/*<OurSuccessesSection/>*/}
+    <OurSuccessesSection/>
   </Layout>
 )
 

@@ -22,10 +22,13 @@ const LocationSection = () => (
           <div className="col-12 col-md-5 col-xl-4">
             <p className="text cmt-3">Bank: BPH S.A. Oddział Myślenice</p>
             <p className="text">Numer konta: 51051515055151515</p>
-            <p className="text">NIP: 681-142-26-43 &#9899; REGON: 356291852</p>
-            <a href="https://goo.gl/maps/ffA3Egv2dYMQ5urv5" target="_blank" title="Zobacz mapę dojazdu"
+            <p className="text">NIP: 681-142-26-43 <span role="img" aria-label="icon">&#9899;</span> REGON: 356291852</p>
+            <a href="https://goo.gl/maps/ffA3Egv2dYMQ5urv5"
+               target="_blank"
+               title="Zobacz mapę dojazdu"
+               rel="noreferrer"
                className="link link--accent link--white cmt-2">Zobacz mapę
-              dojazdu &#8594;</a>
+              dojazdu <span role="img" aria-label="icon">&#8594;</span></a>
           </div>
         </div>
       </div>

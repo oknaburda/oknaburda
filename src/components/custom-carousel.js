@@ -16,6 +16,9 @@ const CustomCarousel = ({ children, responsive }) => {
       showDots={true}
       arrows={false}
       customDot={<CustomDots />}
+      autoPlay={true}
+      autoPlaySpeed={15000}
+      infinite={true}
     >
       {children}
     </Carousel>

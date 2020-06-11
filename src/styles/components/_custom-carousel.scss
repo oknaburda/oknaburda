@@ -1,6 +1,12 @@
 .custom-carousel {
   &__dots {
     position: relative !important;
+    justify-content: flex-end !important;
+    margin-top: nth($spaces, 2);
+
+    @media screen and (max-width: $md) {
+      justify-content: center !important;
+    }
   }
 
   &__dot {

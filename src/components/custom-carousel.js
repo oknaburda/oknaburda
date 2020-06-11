@@ -9,8 +9,8 @@ const CustomCarousel = ({ children, responsive }) => {
     <Carousel
       responsive={responsive}
       containerClass="row"
-      sliderClass="order-last"
-      dotListClass="col-12 order-first custom-carousel__dots cmb-xsm-4 cmb-md-5 cmb-6 cmt-xsm-1 cmt-md-2 cmt-3"
+      sliderClass="cmt-xsm-1 cmt-md-2 cmt-3"
+      dotListClass="col-12 custom-carousel__dots cmb-xsm-4 cmb-md-5 cmb-6 cmt-xsm-1 cmt-md-2 cmt-3"
       focusOnSelect={false}
       minimumTouchDrag={80}
       showDots={true}

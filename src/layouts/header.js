@@ -6,10 +6,10 @@ import GatsbyImage from "gatsby-image"
 const Header = () => {
   const data = useStaticQuery(graphql`
       query {
-          file(name: {eq: "logo"}) {
+          file(absolutePath: {regex: "/assets/images/logo.png/"}) {
               name
               childImageSharp {
-                  fixed(quality: 90, height: 70) {
+                  fixed(quality: 90, height: 60) {
                       ...GatsbyImageSharpFixed_tracedSVG
                   }
               }

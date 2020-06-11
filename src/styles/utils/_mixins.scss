@@ -9,7 +9,7 @@
 }
 
 @mixin customShadow($color) {
-  box-shadow: 5px 5px 30px $color;
+  box-shadow: 0 0 20px $color;
 }
 
 @mixin customBorder($size, $color, $radius) {
@@ -56,5 +56,6 @@
 }
 
 @mixin commonTransition($property, $duration, $delay: 0s) {
-  transition: $property $duration $delay $transition-function;
+  transition: $property $duration $delay linear;
+  will-change: $property;
 }

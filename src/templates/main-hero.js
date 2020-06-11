@@ -20,14 +20,21 @@ const MainHero = () => {
     <header>
       <div className="main-hero">
         <GatsbyImage
-          className=""
+          className="main-hero__background"
           fixed={data.file.childImageSharp.fixed}
         />
-        <div>
-          <h1>Centrum Stolarki Okiennej <span>Krzysztof Burda</span></h1>
-          <div>
-            <Link to="/oferta" title="Sprawdź ofertę">Sprawdź ofertę</Link>
-            <Link to="/kontakt" title="Skontaktuj się">Skontaktuj się</Link>
+        <div className="main-hero__content">
+          <h1 className="main-header">Centrum Stolarki Okiennej <span
+            className="main-header--accent main-header--block">Krzysztof Burda</span></h1>
+          <div className="main-hero__links-wrapper">
+            <Link
+              to="/oferta"
+              title="Sprawdź ofertę"
+              className="button button--accent">Sprawdź ofertę</Link>
+            <Link
+              to="/kontakt"
+              title="Skontaktuj się"
+              className="button button--light">Skontaktuj się</Link>
           </div>
         </div>
       </div>

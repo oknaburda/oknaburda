@@ -1,0 +1,36 @@
+.button {
+  @include fontSizeWeightAndLineHeight($font-base, $font-bold, $font-24);
+  @include customShadow(transparent);
+  @include commonTransition(box-shadow, 0.15s, 0s);
+
+  display: inline-block;
+  padding: nth($spaces, 1) nth($spaces, 4);
+  margin: 0 nth($spaces, 2);
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--accent {
+
+    background-color: $accent-color;
+    color: $white;
+
+    &:hover {
+      @include customShadow($black * 1.2);
+      color: $white;
+    }
+  }
+
+  &--light {
+    background-color: $white;
+    color: $text-color;
+
+    &:hover {
+      @include customShadow($black * 1.2);
+      color: $text-color;
+    }
+  }
+}

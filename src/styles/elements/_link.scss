@@ -16,4 +16,11 @@
   &--active {
     color: $accent-color;
   }
+
+  &--accent {
+    @include fontSizeWeightAndLineHeight($font-18, $font-bold, $font-24);
+
+    color: $accent-color;
+    border-bottom: 2px solid $accent-color;
+  }
 }

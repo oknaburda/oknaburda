@@ -3,7 +3,6 @@
   overflow: hidden;
   width: 100%;
   height: 500px;
-  background-color: red;
 
   @include flexCenter();
 
@@ -12,12 +11,13 @@
   }
 
   &__background {
-    //z-index: -1;
+    z-index: -1;
   }
 
   &__content {
     text-align: center;
     width: 100%;
+    padding: nth($spaces, 6) 0;
   }
 
   &__links-wrapper {

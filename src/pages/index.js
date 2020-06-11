@@ -13,8 +13,8 @@ const IndexPage = () => (
     <SEO title="Home"/>
     <MainHero/>
     <OverviewSection/>
-    <OfferGallerySection/>
-    <OurSuccessesSection/>
+    {/*<OfferGallerySection/>*/}
+    {/*<OurSuccessesSection/>*/}
     <LocationSection/>
   </Layout>
 )

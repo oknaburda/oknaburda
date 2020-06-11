@@ -1,0 +1,18 @@
+.section-header {
+  @include fontSizeWeightAndLineHeight($font-32, $font-black, $font-40);
+
+  position: relative;
+  padding-left: nth($spaces, 2);
+  margin-bottom: nth($spaces, 4);
+
+  &::before {
+    @include initPseudoElement();
+    @include setElementSize(8px, 100%);
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $accent-color;
+    z-index: 1;
+  }
+}

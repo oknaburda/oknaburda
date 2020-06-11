@@ -1,0 +1,26 @@
+.custom-carousel {
+  &__dots {
+    position: relative !important;
+  }
+
+  &__dot {
+    display: block;
+    background-color: $secondary-color;
+    padding: 5px nth($spaces, 3);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    margin: 0 nth($spaces, 2);
+    font-size: 0;
+
+    @include commonTransition(opacity, 0.15s, 0s);
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--active {
+      background-color: $accent-color;
+    }
+  }
+}

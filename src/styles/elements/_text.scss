@@ -4,6 +4,10 @@
     color: $accent-color;
   }
 
+  &--bold {
+    font-weight: bold;
+  }
+
   &--upper {
     text-transform: uppercase;
   }

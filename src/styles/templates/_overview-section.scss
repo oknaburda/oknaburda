@@ -1,0 +1,19 @@
+.overview {
+  &__image {
+    width: 100% !important;
+    user-select: none;
+
+    @media screen and (max-width: $sm) {
+      max-height: 240px;
+      margin-bottom: nth($spaces, 2);
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    user-select: none;
+  }
+}

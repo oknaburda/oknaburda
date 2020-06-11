@@ -15,4 +15,8 @@
     background-color: $accent-color;
     z-index: 1;
   }
+
+  &--offset {
+    transform: translateX(nth($spaces, 2) * -1);
+  }
 }

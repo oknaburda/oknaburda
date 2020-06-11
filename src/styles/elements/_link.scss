@@ -9,6 +9,14 @@
     opacity: 0.5;
   }
 
+  &--white {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   &--navigation {
     @include fontSizeWeightAndLineHeight($font-18, $font-bold, $font-24);
   }

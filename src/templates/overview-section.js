@@ -5,12 +5,28 @@ import { graphql, useStaticQuery } from "gatsby"
 import OverviewSection1 from "../components/carousel-item/overview-section1"
 import OverviewSection2 from "../components/carousel-item/overview-section2"
 import OverviewSection3 from "../components/carousel-item/overview-section3"
+import CustomDots from "../components/custom-dots"
 
 const resolutions = {
   all: {
     breakpoint: { max: 6000, min: 0 },
     items: 1
   }
+}
+
+const carouselOptions = {
+  responsive: resolutions,
+  containerClass: "row",
+  sliderClass: "cmt-xsm-1 cmt-md-2 cmt-3",
+  dotListClass: "col-12 custom-carousel__dots cmt-xsm-1 cmt-md-2 cmt-3",
+  focusOnSelect: false,
+  minimumTouchDrag: 80,
+  showDots: true,
+  arrows: false,
+  customDot: <CustomDots/>,
+  autoPlay: true,
+  autoPlaySpeed: 15000,
+  infinite: true
 }
 
 const OverviewSection = () => {
@@ -47,7 +63,7 @@ const OverviewSection = () => {
       <div className="container">
         <h2 className="section-header">Okna, drzwi, rolety, bramy - Myślenice</h2>
 
-        <CustomCarousel responsive={resolutions}>
+        <CustomCarousel carouselOptions={carouselOptions}>
           <OverviewSection1 image={data.image1}/>
           <OverviewSection2 image={data.image2}/>
           <OverviewSection3 image={data.image3}/>

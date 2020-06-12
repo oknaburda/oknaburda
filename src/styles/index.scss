@@ -36,10 +36,10 @@ body {
   @include fontMontserrat();
   @include fontSizeWeightAndLineHeight($font-base, $font-regular, $font-24);
 
-  background-color: $white;
+  background-color: $background-color-1;
   color: $text-color;
 }
 
-main {
-  background-color: $background-color-1;
-}
+//main {
+//  background-color: $background-color-1;
+//}

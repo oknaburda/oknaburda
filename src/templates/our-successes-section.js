@@ -23,16 +23,16 @@ const OurSuccessesSection = () => {
   const years = new Date().getFullYear() - presetDate
 
   return (
-    <section>
+    <section className="cmb-xsm-4 cmb-md-6 cmb-8">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-7 col-lg-6 our-successes__column">
-            <h2 className="section-header">Nasze osiągnięcia</h2>
+          <div className="col-12 col-md-7 col-lg-6 our-successes__column cpr-4">
+            <h2 className="section-header cmb-2">Nasze osiągnięcia</h2>
             <p>Posiadane przez nas produkty w ofercie, to zaawansowane technologicznie materiały, nowooczesne procesy
               produkcji oraz bogate doświadczenie, poparte satysfakcją naszych Klientów.</p>
 
             <div className="row our-successes__counter cmt-xsm-4 cmt-md-5 cmt-6">
-              <div className="col-4">
+              <div className="col-6 col-sm-4">
                 <p className="text our-successes__counter-number">
                   <CountUp
                     start={103}
@@ -43,7 +43,7 @@ const OurSuccessesSection = () => {
                 </p>
                 <p>Wykonanych okien</p>
               </div>
-              <div className="col-4">
+              <div className="col-6 col-sm-4">
                 <p className="text our-successes__counter-number">
                   <CountUp
                     start={0}
@@ -54,14 +54,14 @@ const OurSuccessesSection = () => {
                 </p>
                 <p>Lat doświadczeń</p>
               </div>
-              <div className="col-4">
+              <div className="col-sm-4 cmt-xsm-2">
                 <p className="text our-successes__counter-number">
                   <CountUp
                     start={0}
                     end={1000}
                     duration={30}
                     delay={2}
-                    prefix={"+"}
+                    suffix={"+"}
                   />
                 </p>
                 <p>Zadowolonych klientów</p>

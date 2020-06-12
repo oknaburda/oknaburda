@@ -5,7 +5,7 @@ import GatsbyImage from "gatsby-image"
 const OverviewSection2 = ({ image }) => (
   <div className="col-12">
     <div className="row">
-      <div className="col-12 col-md-8 col-lg-7 overview__column order-last order-md-first">
+      <div className="col-12 col-md-8 col-lg-7 overview__column overview__column--left order-last order-md-first">
         <h3 className="sub-header">Nie tylko okna i drzwi</h3>
         <p className="text cmb-2">Podstawową działalność handlowo-usługową prowadzimy w Myślenicach - jesteśmy jednak
           przygotowani na realizację zleceń z obszaru województwa małopolskiego.</p>

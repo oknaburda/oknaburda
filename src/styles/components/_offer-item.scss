@@ -1,0 +1,98 @@
+.offer-item {
+  position: relative;
+  width: 100%;
+  padding-top: 143.75%;
+  user-select: none;
+  overflow: hidden;
+
+  @media screen and (max-width: $sm) {
+    padding-top: 70%;
+  }
+
+  &:hover {
+    .offer-item__title-content {
+      opacity: 0;
+    }
+
+    .offer-item__description-content {
+      opacity: 1;
+    }
+  }
+
+  &__slider {
+    padding: 0 nth($spaces, 6);
+  }
+
+  &__image {
+    @include positionAbsoluteCenter();
+
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  &__title-content, &__description-content {
+    @include setElementSize(100%, 100%);
+    @include commonTransition(opacity, 0.15s, 0s);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: nth($spaces, 3) nth($spaces, 2);
+  }
+
+  &__title-content {
+    z-index: 1;
+
+    &:before {
+      @include initPseudoElement();
+      @include positionAbsoluteCenter();
+      @include setElementSize(100%, 100%);
+
+      background: linear-gradient(to top right, rgba($black, 0.6), rgba($black, 0.01));
+      z-index: -1;
+    }
+  }
+
+  &__description-content {
+    background: linear-gradient(to top right, $background-color-2, rgba($background-color-2, 0.2));
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__header {
+    @include fontSizeWeightAndLineHeight(calc((100vw / 100) + 10px), $font-black, calc((100vw / 100) + 18px));
+
+    color: $white;
+    text-shadow: 0 0 8px rgba($black, 0.3);
+
+    @media screen and (max-width: $md) {
+      @include fontSizeWeightAndLineHeight($font-24, $font-black, $font-32);
+    }
+
+    &--accent {
+      position: relative;
+      padding-left: nth($spaces, 2);
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      &::before {
+        @include initPseudoElement();
+        @include setElementSize(nth($spaces, 1), calc((100vw / 100) + 18px));
+
+        top: 0;
+        left: 0;
+        background-color: $accent-color;
+        z-index: 1;
+
+        @media screen and (max-width: $md) {
+          height: $font-32;
+        }
+      }
+    }
+  }
+}

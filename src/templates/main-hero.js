@@ -34,7 +34,7 @@ const MainHero = () => {
             <Link
               to="/kontakt"
               title="Skontaktuj się"
-              className="button button--light">Skontaktuj się</Link>
+              className="button button--light cmt-sm-2">Skontaktuj się</Link>
           </div>
         </div>
       </div>

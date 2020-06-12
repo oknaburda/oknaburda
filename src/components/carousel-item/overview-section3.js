@@ -11,7 +11,7 @@ const OverviewSection3 = ({image}) => (
           fixed={image.childImageSharp.fixed}
         />
       </div>
-      <div className="col-12 col-md-8 col-lg-6 overview__column">
+      <div className="col-12 col-md-8 col-lg-6 overview__column overview__column--right">
         <h3 className="sub-header">Jakość i technologia</h3>
         <p className="text cmb-2">Posiadane przez nas produkty w ofercie, to zaawansowane technologicznie materiały, nowoczesne
           procesy produkcji oraz bogate doświadczenie, poparte satysfakcją naszych Klientów.</p>

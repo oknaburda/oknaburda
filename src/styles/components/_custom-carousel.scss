@@ -7,6 +7,14 @@
     @media screen and (max-width: $md) {
       justify-content: center !important;
     }
+
+    &--hide-xl {
+      justify-content: center !important;
+
+      @media screen and (min-width: $lg+1) {
+        display: none !important;
+      }
+    }
   }
 
   &__dot {

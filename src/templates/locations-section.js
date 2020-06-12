@@ -1,7 +1,7 @@
 import React from "react"
 
 const LocationSection = () => (
-  <section className="cmt-xsm-4 cmt-md-6 cmt-8 cmb-xsm-4 cmb-md-6 cmb-8">
+  <section className="cmb-xsm-4 cmb-md-6 cmb-8">
     <div className="container">
       <div className="location">
         <h2 className="section-header section-header--offset">Lokalizacja</h2>

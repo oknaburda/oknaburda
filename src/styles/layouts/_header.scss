@@ -1,4 +1,6 @@
 .header {
+  background-color: $white;
+
   &__top-bar {
     display: flex;
     align-items: center;
@@ -17,7 +19,7 @@
   &__main-bar {
     display: flex;
     justify-content: space-between;
-    padding: nth($spaces, 1) 0;
+    padding: nth($spaces, 2) 0;
   }
 
   &__logo {

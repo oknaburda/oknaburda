@@ -11,7 +11,7 @@ const OverviewSection1 = ({ image }) => (
           fixed={image.childImageSharp.fixed}
         />
       </div>
-      <div className="col-12 col-md-5 col-lg-6 overview__column">
+      <div className="col-12 col-md-5 col-lg-6 overview__column overview__column--right">
         <h3 className="sub-header">Nasza misja</h3>
         <p className="text cmb-2">Okna Myślenice, drzwi i rolety to priorytet naszego rozwoju. Nasza firma działa na
           rynku od 2001

@@ -11,6 +11,25 @@
     padding: nth($spaces, 4);
   }
 
+  &--light {
+    background-color: transparent;
+    color: $text-color;
+
+    padding: nth($spaces, 8) nth($spaces, 2);
+
+    @media screen and (max-width: $md) {
+      padding: nth($spaces, 6) nth($spaces, 2);
+    }
+
+    @media screen and (max-width: $xsm) {
+      padding: nth($spaces, 4) nth($spaces, 2);
+    }
+
+    .link {
+      color: $text-color;
+    }
+  }
+
   &__header {
     @include fontSizeWeightAndLineHeight($font-24, $font-bold, $font-32);
 

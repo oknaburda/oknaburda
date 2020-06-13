@@ -1,16 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../layouts/layout"
 import SEO from "../components/seo"
+import CustomPageHeader from "../components/custom-page-header"
+import LocationSection from "../templates/locations-section"
 
-const Gallery = () => (
-  <Layout>
-    <SEO title="Galeria" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const Gallery = () => {
+  const data = useStaticQuery(graphql`
+      query {
+          header: file(absolutePath: {regex: "/assets/images/gallery/header.jpg/"}) {
+              name
+              childImageSharp {
+                  fixed(quality: 90, height: 500) {
+                      ...GatsbyImageSharpFixed_tracedSVG
+                  }
+              }
+          }
+      }`
+  )
+
+  return (
+    <Layout>
+      <SEO title="Galeria"/>
+      <CustomPageHeader image={data.header} pageTitle="Galeria"/>
+
+      <LocationSection/>
+    </Layout>
+  )
+}
 
 export default Gallery

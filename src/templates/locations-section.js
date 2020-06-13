@@ -1,9 +1,9 @@
 import React from "react"
 
-const LocationSection = () => (
+const LocationSection = ({ theme }) => (
   <section className="cmb-xsm-4 cmb-md-6 cmb-8">
     <div className="container">
-      <div className="location">
+      <div className={`location ${theme}`}>
         <h2 className="section-header section-header--offset">Lokalizacja</h2>
 
         <div className="row">
@@ -22,7 +22,8 @@ const LocationSection = () => (
           <div className="col-12 col-md-5 col-xl-4">
             <p className="text cmt-3">Bank: BPH S.A. Oddział Myślenice</p>
             <p className="text">Numer konta: 51051515055151515</p>
-            <p className="text">NIP: 681-142-26-43 <span role="img" aria-label="icon">&#9899;</span> REGON: 356291852</p>
+            <p className="text">NIP: 681-142-26-43 <span role="img" aria-label="icon">&#9899;</span> REGON: 356291852
+            </p>
             <a href="https://goo.gl/maps/ffA3Egv2dYMQ5urv5"
                target="_blank"
                title="Zobacz mapę dojazdu"

@@ -23,7 +23,7 @@ const OurSuccessesSection = () => {
   const years = new Date().getFullYear() - presetDate
 
   return (
-    <section className="cmb-xsm-4 cmb-md-6 cmb-8">
+    <section className="cmb-md-6 cmb-8">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-7 col-lg-6 our-successes__column cpr-4">

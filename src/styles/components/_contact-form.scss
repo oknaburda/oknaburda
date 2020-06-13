@@ -1,0 +1,168 @@
+.contact-form {
+  @include customBorder(1px, $secondary-color, 0);
+
+  margin-top: nth($spaces, 2);
+  background-color: $white;
+  padding: nth($spaces, 6) nth($spaces, 10);
+
+  @media screen and (max-width: $lg) {
+    padding: nth($spaces, 6) nth($spaces, 8);
+  }
+
+  @media screen and (max-width: $md) {
+    margin-top: 0;
+    padding: nth($spaces, 4) nth($spaces, 6);
+  }
+
+  &__items-group {
+    display: flex;
+    flex-direction: column;
+    margin: nth($spaces, 2) 0;
+  }
+
+  &__label {
+    @include fontSizeWeightAndLineHeight($font-base, $font-bold, $font-20);
+    color: $text-color;
+    width: 100%;
+
+    &--checkbox {
+      display: flex;
+      font-weight: $font-regular;
+      cursor: pointer;
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    padding: nth($spaces, 1);
+    margin: nth($spaces, 1) 0;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 1px $text-color;
+
+    @include commonTransition(box-shadow, 0.15s, 0s);
+
+    &:hover {
+      box-shadow: 0 0 3px 1px $accent-color;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px $accent-color;
+    }
+
+    &--error {
+      box-shadow: 0 0 1px 2px $error-color;
+    }
+  }
+
+  &__textarea-field {
+    resize: none;
+  }
+
+  &__checkbox-field {
+    position: absolute;
+    top: 0;
+    left: -10000%;
+    opacity: 0;
+
+    &:hover {
+      & + .contact-form__custom-checkbox {
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    &:checked {
+      & + .contact-form__custom-checkbox {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__checkbox-label-text {
+    width: calc(100% - 24px);
+
+    &:hover {
+      text-shadow: 0 0 3px 1px $accent-color;
+    }
+
+    &:focus {
+      text-shadow: 0 0 0 1px $accent-color;
+    }
+
+    &--error {
+      color: $error-color;
+    }
+  }
+
+  &__custom-checkbox {
+    @include setElementSize(24px, 24px);
+    @include commonTransition(box-shadow, 0.15s, 0s);
+
+    position: relative;
+    display: block;
+    margin-right: nth($spaces, 2);
+    background-color: $white;
+    box-shadow: 0 0 0 1px $text-color;
+    transform: translateY(6px);
+
+    &::after {
+      @include initPseudoElement();
+      @include positionAbsoluteCenter();
+      @include setElementSize(100%, 100%);
+      @include commonTransition(transform, 0.15s, 0s);
+
+      content: "\2714";
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      opacity: 0;
+    }
+
+    &--checked {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 3px 1px $accent-color;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px $accent-color;
+    }
+
+    &--error {
+      box-shadow: 0 0 1px 2px $error-color;
+    }
+  }
+
+  &__error-group {
+    @include fontSizeWeightAndLineHeight($font-base, $font-bold, $font-18);
+
+    margin-top: nth($spaces, 1);
+    color: $error-color;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 0 0 auto;
+
+    &:disabled {
+      opacity: 0.5;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+//.contact-form__checkbox-field:hover + .contact-form__custom-checkbox {
+//  background-color: red;
+//}

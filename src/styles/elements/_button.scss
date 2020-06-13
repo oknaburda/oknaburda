@@ -6,6 +6,8 @@
   display: inline-block;
   padding: nth($spaces, 1) nth($spaces, 4);
   margin: 0 nth($spaces, 2);
+  outline: none;
+  border: none;
   user-select: none;
   cursor: pointer;
 
@@ -14,7 +16,6 @@
   }
 
   &--accent {
-
     background-color: $accent-color;
     color: $white;
 

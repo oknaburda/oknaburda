@@ -6,6 +6,7 @@ import OverviewSection from "../templates/overview-section"
 import MainHero from "../templates/main-hero"
 import OfferSection from "../templates/offer-gallery-section"
 import OurSuccessesSection from "../templates/our-successes-section"
+import ContactFormSection from "../templates/contact-form-section"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <OverviewSection/>
     <OfferSection/>
     <OurSuccessesSection/>
+    <ContactFormSection/>
   </Layout>
 )
 

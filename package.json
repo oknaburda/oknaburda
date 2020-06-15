@@ -22,6 +22,8 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
+    "react-image-lightbox": "^5.1.1",
+    "react-lightbox-component": "^1.2.1",
     "react-multi-carousel": "^2.5.5",
     "yup": "^0.29.1"
   },

@@ -7,15 +7,11 @@ import OverviewSection2 from "../components/carousel-item/overview-section2"
 import OverviewSection3 from "../components/carousel-item/overview-section3"
 import CustomDots from "../components/custom-dots"
 
-const resolutions = {
-  all: {
-    breakpoint: { max: 6000, min: 0 },
-    items: 1
-  }
-}
+import { allResolutions } from "../utils/resolutions"
+
 
 const carouselOptions = {
-  responsive: resolutions,
+  responsive: allResolutions,
   containerClass: "row",
   sliderClass: "cmt-xsm-1 cmt-md-2 cmt-3",
   dotListClass: "col-12 custom-carousel__dots cmt-xsm-1 cmt-md-2 cmt-3",

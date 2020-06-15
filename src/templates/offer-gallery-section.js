@@ -4,28 +4,7 @@ import OfferItem from "../components/offer-item"
 import CustomDots from "../components/custom-dots"
 import CustomCarousel from "../components/custom-carousel"
 
-const resolutions = {
-  xl: {
-    breakpoint: { max: 6000, min: 1200 },
-    items: 5
-  },
-  lg: {
-    breakpoint: { max: 1199, min: 992 },
-    items: 4
-  },
-  md: {
-    breakpoint: { max: 991, min: 768 },
-    items: 3
-  },
-  sm: {
-    breakpoint: { max: 767, min: 576 },
-    items: 2
-  },
-  xsm: {
-    breakpoint: { max: 576, min: 0 },
-    items: 1
-  }
-}
+import { resolutions } from "../utils/resolutions"
 
 const carouselOptions = {
   containerClass: "row cmt-5",
@@ -40,6 +19,7 @@ const carouselOptions = {
   infinite: true,
   responsive: resolutions
 }
+
 
 const OfferSection = () => {
   const data = useStaticQuery(graphql`

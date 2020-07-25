@@ -2,6 +2,10 @@
   padding-left: nth($spaces, 5);
 
   @media screen and (max-width: $md) {
-    padding-left: nth($spaces, 2);
+    padding-left: nth($spaces, 4);
+  }
+
+  @media screen and (max-width: $sm) {
+    padding: nth($spaces, 1) 0;
   }
 }

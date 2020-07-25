@@ -35,3 +35,33 @@
     }
   }
 }
+
+.no-button {
+  display: none;
+  border: none;
+  outline: none;
+  background: none;
+  color: $black;
+  font-size: $font-32;
+
+  @media screen and (max-width: $sm) {
+    display: block;
+  }
+
+  &--close {
+    @media screen and (max-width: $sm) {
+      position: absolute;
+      right: nth($spaces, 3);
+      top: nth($spaces, 3);
+    }
+  }
+}
+
+.hamburger {
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: $black;
+    margin: 6px 0;
+  }
+}

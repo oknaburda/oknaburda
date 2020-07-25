@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Navigation from "./navigation"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import GatsbyImage from "gatsby-image"
@@ -16,6 +16,15 @@ const Header = () => {
           }
       }`
   )
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleOpenCloseMenu = (event, element) => {
+    event.preventDefault()
+
+    setIsOpen(!isOpen)
+    console.log(isOpen)
+  }
 
   return (
     <header className="header">
@@ -47,7 +56,14 @@ const Header = () => {
               fixed={data.file.childImageSharp.fixed}
             />
           </Link>
-          <Navigation/>
+          <Navigation isOpen={isOpen} handleClick={handleOpenCloseMenu}/>
+          <button className="no-button" onClick={handleOpenCloseMenu} type="button">
+            <i className="hamburger">
+              <div/>
+              <div/>
+              <div/>
+            </i>
+          </button>
         </div>
       </div>
     </header>

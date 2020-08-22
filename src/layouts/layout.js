@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
+import WrapRootElement from "../../gatsby-browser"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -18,11 +19,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <WrapRootElement>
       <Header siteTitle={data.site.siteMetadata.title}/>
       <main>{children}</main>
-      <Footer />
-    </>
+      <Footer/>
+    </WrapRootElement>
   )
 }
 

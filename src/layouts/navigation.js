@@ -10,18 +10,15 @@ const navigationItems = [
 ].map((item, index) => <NavigationItem key={index} {...item} />)
 
 
-const Navigation = ({ isOpen, handleClick }) => {
-  console.log("here", isOpen)
-  return (
-    <nav className={`navigation${isOpen ? " navigation--active" : ""}`}>
-      <button className="no-button no-button--close" type="button" onClick={handleClick}>
-        x
-      </button>
-      <ul className="navigation__list">
-        {navigationItems}
-      </ul>
-    </nav>
-  )
-}
+const Navigation = ({ isOpen, handleClick }) => (
+  <nav className={`navigation${isOpen ? " navigation--active" : ""}`}>
+    <button className="no-button no-button--close" type="button" onClick={handleClick}>
+      x
+    </button>
+    <ul className="navigation__list">
+      {navigationItems}
+    </ul>
+  </nav>
+)
 
 export default Navigation

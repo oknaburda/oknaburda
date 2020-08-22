@@ -6,8 +6,6 @@ const CheckboxField = props => {
   const { name, label } = props
   const [field, meta] = useField(props)
 
-  console.log(meta.error && meta.touched, meta.error, meta.touched)
-
   return (
     <div className="contact-form__items-group">
       <label className="contact-form__label contact-form__label--checkbox" htmlFor={name}>

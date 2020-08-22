@@ -21,9 +21,7 @@ const Header = () => {
 
   const handleOpenCloseMenu = (event, element) => {
     event.preventDefault()
-
     setIsOpen(!isOpen)
-    console.log(isOpen)
   }
 
   return (

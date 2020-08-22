@@ -25,7 +25,7 @@ const CustomGalleryRow = ({ title, images }) => {
   const [photoIndex, setPhotoIndex] = useState(0)
 
   const fullImages = images.map(item => item.fullImages)
-  const thumbnails = images.map(item => item.thumbnails)
+  const thumbnails = images.map(item => item.fullImages)
 
 
   return (

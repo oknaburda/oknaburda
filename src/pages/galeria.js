@@ -28,10 +28,6 @@ const Gallery = () => {
                           fullImages: fixed(quality: 90, height: 1280) {
                               ...GatsbyImageSharpFixed_tracedSVG
                           }
-
-                          thumbnails: fixed(quality: 90, height: 600) {
-                              ...GatsbyImageSharpFixed_tracedSVG
-                          }
                       }
                   }
               }
@@ -42,10 +38,6 @@ const Gallery = () => {
                   node {
                       image: childImageSharp {
                           fullImages: fixed(quality: 90, height: 1280) {
-                              ...GatsbyImageSharpFixed_tracedSVG
-                          }
-
-                          thumbnails: fixed(quality: 90, height: 600) {
                               ...GatsbyImageSharpFixed_tracedSVG
                           }
                       }
@@ -60,10 +52,6 @@ const Gallery = () => {
                           fullImages: fixed(quality: 90, height: 1280) {
                               ...GatsbyImageSharpFixed_tracedSVG
                           }
-
-                          thumbnails: fixed(quality: 90, height: 600) {
-                              ...GatsbyImageSharpFixed_tracedSVG
-                          }
                       }
                   }
               }
@@ -76,8 +64,16 @@ const Gallery = () => {
                           fullImages: fixed(quality: 90, height: 1280) {
                               ...GatsbyImageSharpFixed_tracedSVG
                           }
+                      }
+                  }
+              }
+          }
 
-                          thumbnails: fixed(quality: 90, height: 600) {
+          category5: allFile(filter: {absolutePath: {regex: "/gallery/category5/"}}) {
+              edges {
+                  node {
+                      image: childImageSharp {
+                          fullImages: fixed(quality: 90, height: 1280) {
                               ...GatsbyImageSharpFixed_tracedSVG
                           }
                       }
@@ -89,20 +85,24 @@ const Gallery = () => {
 
   const categoriesRows = [
     {
-      title: "Okna, drzwi",
+      title: "Drzwi wewnętrzne",
       images: data.category1.edges.map(item => item.node.image)
     },
     {
-      title: "Rolety, żaluzje, moskitiery",
+      title: "Okna",
       images: data.category2.edges.map(item => item.node.image)
     },
     {
-      title: "Parapety zewnętrzne i wewnętrzne",
+      title: "Plisy",
       images: data.category3.edges.map(item => item.node.image)
     },
     {
-      title: "Bramy garażowe",
+      title: "Rolety",
       images: data.category4.edges.map(item => item.node.image)
+    },
+    {
+      title: "Żaluzje",
+      images: data.category5.edges.map(item => item.node.image)
     }
   ].map(item => (
     <CustomGalleryRow key={item.title} {...item}/>

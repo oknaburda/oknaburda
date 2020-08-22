@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/oknaburda",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Centrum Stolarki Okiennej Krzysztof Burda`,
     description: `Firma świadcząca usługi w zakresie sprzedaży oraz pełnego montażu okien, drzwi, bram, żaluzji, parapetów, schodów strychowych.`,

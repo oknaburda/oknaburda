@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: "/oknaburda",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Centrum Stolarki Okiennej Krzysztof Burda`,
+    description: `Firma świadcząca usługi w zakresie sprzedaży oraz pełnego montażu okien, drzwi, bram, żaluzji, parapetów, schodów strychowych.`,
     author: `@gatsbyjs`,
   },
   plugins: [

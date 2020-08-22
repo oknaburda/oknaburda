@@ -15,13 +15,15 @@ const LocationSection = ({ theme }) => (
                                             className="link link--white">+48 12 274 10 03</a></p>
             <p className="text">tel. kom. <a href="tel:+48601530589" title="tel./kom: +48 601 530 589"
                                              className="link link--white">+48 601 530 589</a></p>
-            <a href="mailto:centrumstolarki@okna-drzwi-myslenice.pl"
-               title="email: centrumstolarki@okna-drzwi-myslenice.pl"
-               className="link link--white">centrumstolarki@okna-drzwi-myslenice.pl</a>
+            <a href="mailto:csoburda@gmail.com"
+               title="email: csoburda@gmail.com"
+               className="link link--white">csoburda@gmail.com</a>
           </div>
           <div className="col-12 col-md-5 col-xl-4">
-            <p className="text cmt-3">Bank: BPH S.A. Oddział Myślenice</p>
-            <p className="text">Numer konta: 51051515055151515</p>
+            <p className="text cmt-3">Bank PKO BP</p>
+            <p className="text">
+              Numer konta: <span className="d-inline-block">76 1020 2892 0000 5102 0021 8743</span>
+            </p>
             <p className="text">NIP: 681-142-26-43 <span role="img" aria-label="icon">&#9899;</span> REGON: 356291852
             </p>
             <a href="https://goo.gl/maps/ffA3Egv2dYMQ5urv5"

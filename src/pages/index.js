@@ -11,7 +11,7 @@ import LocationSection from "../templates/locations-section"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home"/>
+    <SEO title="Strona główna"/>
     <MainHero/>
     <OverviewSection/>
     <OfferSection/>

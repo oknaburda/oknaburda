@@ -6,10 +6,12 @@ import TextField from "./contact-form/TextField"
 import TextareaField from "./contact-form/TextareaField"
 import CheckboxField from "./contact-form/CheckboxField"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import { saveContactForm } from "../utils/saveContact"
 
 
 const ContactForm = () => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  const { executeRecaptcha } = useGoogleReCaptcha()
+  console.log(process.env.GRAPH_CMS_ACCESS_TOKEN)
 
   return (
     <div className="contact-form">
@@ -45,21 +47,27 @@ const ContactForm = () => {
           })
         }
 
-        onSubmit={ async (values, { setSubmitting, resetForm }) => {
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
           if (!executeRecaptcha) {
-            return;
+            return
           }
 
-          const resultReCaptcha = await executeRecaptcha('homepage');
+          const resultReCaptcha = await executeRecaptcha("homepage")
+          if (!!resultReCaptcha) {
+            const isContactAdded = await saveContactForm(values)
+            console.log(isContactAdded)
+            if (isContactAdded) {
+              alert("Wiadomość wysłana poprawnie")
+              resetForm()
+            } else {
+              alert("Wysyłanie wiadomości nie powiodło się. Prosimy spróbować ponownie")
+            }
+          }
 
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            console.log(resultReCaptcha)
-            setSubmitting(false)
-          }, 1000)
+          setSubmitting(false)
         }}
       >{props => (
-        <Form onSubmit={props.handleSubmit}>
+        <Form style={{ opacity: props.isSubmitting ? "0.6" : "1" }} onSubmit={props.handleSubmit}>
           <div className="row">
             <div className="col-12 col-md-5 col-lg-4 cpr-lg-3 cpr-5">
               <TextField id="firstLastName" name="firstLastName" type="text" label="Imię i nazwisko"

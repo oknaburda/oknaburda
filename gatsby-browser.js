@@ -8,7 +8,7 @@ import "./src/styles/index.scss"
 
 const WrapRootElement = ({ children }) => {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={"6LcgJ8IZAAAAAAC9A9iqQIoo_YwpO8FDWMEUaSlv"}>
+    <GoogleReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}>
       {children}
     </GoogleReCaptchaProvider>
   )

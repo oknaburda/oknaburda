@@ -1,5 +1,0 @@
-.sub-header {
-  @include fontSizeWeightAndLineHeight($font-32, $font-bold, $font-40);
-
-  margin-bottom: nth($spaces, 3);
-}

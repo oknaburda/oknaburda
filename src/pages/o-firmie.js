@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import CustomPageHeader from "../components/custom-page-header"
 import GatsbyImage from "gatsby-image"
 import LocationSection from "../templates/locations-section"
+import { getCurrentYear } from "../utils/getCurrentYear"
 
 const AboutCompany = () => {
   const data = useStaticQuery(graphql`
@@ -39,7 +40,7 @@ const AboutCompany = () => {
         <div className="row cmt-8 cmb-8 cmt-md-6 cmb-md-6">
           <div className="col-12 col-md-7 col-lg-6 overview__column overview__column--left">
             <h3 className="sub-header">Zapraszamy do Myślenic!</h3>
-            <p className="text text--bold cmb-2">Szanowni Państwo, od 6 lat świadczymy usługi w zakresie sprzedaży oraz
+            <p className="text text--bold cmb-2">Szanowni Państwo, od {getCurrentYear(2001)} lat świadczymy usługi w zakresie sprzedaży oraz
               pełnego montażu okien, drzwi, bram, żaluzji, parapetów, schodów strychowych. Serdecznie zapraszamy do
               zapoznania się z zakresem naszej oferty.</p>
 

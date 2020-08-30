@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import GatsbyImage from "gatsby-image"
 import CountUp from "react-countup"
+import { getCurrentYear } from "../utils/getCurrentYear"
 
 
 const OurSuccessesSection = () => {
@@ -17,10 +18,7 @@ const OurSuccessesSection = () => {
       }`
   )
 
-  const date = new Date()
-  date.setFullYear(2001)
-  const presetDate = date.getFullYear()
-  const years = new Date().getFullYear() - presetDate
+  const years = getCurrentYear(2001)
 
   return (
     <section className="cmb-md-6 cmb-8">

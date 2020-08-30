@@ -17,8 +17,6 @@ const OverviewSection2 = ({ image }) => (
           <li className="list__item">Rolety</li>
           <li className="list__item">Bramy garażowe</li>
           <li className="list__item">Parapety zewnętrzne i wewnętrzne (drewno, PCV, stal, aluminium, agglomarmur)</li>
-          <li className="list__item">Okna dachowe i wyłaziowe</li>
-          <li className="list__item">Schody strychowe</li>
           <li className="list__item">Pełna usługa montażowa</li>
         </ul>
       </div>

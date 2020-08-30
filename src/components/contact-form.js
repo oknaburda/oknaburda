@@ -11,6 +11,7 @@ import { saveContactForm } from "../utils/saveContact"
 
 const ContactForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha()
+  console.log(process.env.GRAPH_CMS_ACCESS_TOKEN)
 
   return (
     <div className="contact-form">

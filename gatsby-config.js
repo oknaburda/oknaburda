@@ -20,13 +20,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `okna-burda`,
+        short_name: `okna-burda`,
+        lang: `pl`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#263141`,
+        theme_color: `#263141`,
         display: `minimal-ui`,
-        icon: `src/assets/images/logo.png` // This path is relative to the root of the site.
+        icon: `src/assets/icons/logo.png` // This path is relative to the root of the site.
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

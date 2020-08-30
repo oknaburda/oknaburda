@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Centrum Stolarki Okiennej Krzysztof Burda`,
     description: `Firma świadcząca usługi w zakresie sprzedaży oraz pełnego montażu okien, drzwi, bram, żaluzji, parapetów, schodów strychowych.`,
-    author: `@gatsbyjs`
+    author: `Paweł Kotoniak`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -11,7 +11,6 @@ import { saveContactForm } from "../utils/saveContact"
 
 const ContactForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha()
-  console.log(process.env.GRAPH_CMS_ACCESS_TOKEN)
 
   return (
     <div className="contact-form">
@@ -55,7 +54,6 @@ const ContactForm = () => {
           const resultReCaptcha = await executeRecaptcha("homepage")
           if (!!resultReCaptcha) {
             const isContactAdded = await saveContactForm(values)
-            console.log(isContactAdded)
             if (isContactAdded) {
               alert("Wiadomość wysłana poprawnie")
               resetForm()
